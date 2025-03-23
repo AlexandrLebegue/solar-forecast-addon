@@ -1,5 +1,4 @@
-#!/usr/bin/with-contenv bashio
-
+#!/bin/bash
 # Récupération des configurations
 LATITUDE=$(bashio::config 'latitude')
 LONGITUDE=$(bashio::config 'longitude')
