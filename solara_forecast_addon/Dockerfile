@@ -11,12 +11,14 @@ COPY run.sh .
 COPY run.sh /
 COPY app.py .
 COPY app.py /
-COPY . /home/streamlit
+COPY . /home/solar_panel
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 # # Autoriser l'exécution du script
 # RUN chmod a+x /run.sh
+
+RUN chmod a+x /run.sh
 
 # Démarrage de l'application
 CMD [ "/run.sh" ]
