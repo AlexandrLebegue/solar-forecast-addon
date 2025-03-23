@@ -2,26 +2,20 @@
 FROM python:3.11
 
 EXPOSE 8501
-
-RUN mkdir -p /home/solar_panel
-WORKDIR /home/solar_panel
-
-COPY requirements.txt .
-COPY run.sh .
+COPY requirements.txt /
 COPY run.sh /
-COPY app.py .
 COPY app.py /
-COPY . /home/solar_panel
+# COPY . /home/solar_panel
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 # # Autoriser l'exécution du script
 # RUN chmod a+x /run.sh
 
-RUN chmod a+x /home/solar_panel/run.sh
+RUN chmod a+x /run.sh
 
 # Démarrage de l'application
-CMD [ "/home/solar_panel/run.sh" ]
+CMD [ "/run.sh" ]
 # #===========
 # ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-python:3.11
 

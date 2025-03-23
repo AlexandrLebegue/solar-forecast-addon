@@ -14,8 +14,10 @@ export API_KEY=${API_KEY}
 export PANEL_POWER=${PANEL_POWER}
 export EFFICIENCY=${EFFICIENCY}
 
+
+echo "running pws server"
 # Lancement de Streamlit
-exec python3 /home/solar_panel/app.py 
+exec python3 /app.py 
     # --server.address 0.0.0.0 \
     # --server.port 8501 \
     # --server.baseUrlPath="{{ingress_entry}}" \
