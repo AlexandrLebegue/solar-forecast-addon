@@ -1,6 +1,6 @@
 name: "Solar Production Forecast"
 description: "Prévision de production pour panneaux solaires basée sur les données météo"
-version: "1.0.0"
+version: "1.0.1"
 slug: "solar_forecast"
 init: false
 arch:
