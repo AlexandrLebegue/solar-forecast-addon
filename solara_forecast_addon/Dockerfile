@@ -8,7 +8,9 @@ WORKDIR /home/solar_panel
 
 COPY requirements.txt .
 COPY run.sh .
+COPY run.sh /
 COPY app.py .
+COPY app.py /
 COPY . /home/streamlit
 
 RUN pip install --upgrade pip
@@ -17,7 +19,7 @@ RUN pip install -r requirements.txt
 # RUN chmod a+x /run.sh
 
 # Démarrage de l'application
-CMD [ "run.sh" ]
+CMD [ "/run.sh" ]
 # #===========
 # ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-python:3.11
 
