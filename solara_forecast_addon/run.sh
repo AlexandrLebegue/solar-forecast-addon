@@ -15,7 +15,7 @@ export PANEL_POWER=${PANEL_POWER}
 export EFFICIENCY=${EFFICIENCY}
 
 # Lancement de Streamlit
-exec streamlit run /home/solar_panel/app.py 
+exec python3 /home/solar_panel/app.py 
     # --server.address 0.0.0.0 \
     # --server.port 8501 \
     # --server.baseUrlPath="{{ingress_entry}}" \
