@@ -2,8 +2,13 @@ ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-python:3.11
 
 FROM ${BUILD_FROM}
 
+# Install requirements for add-on
+RUN \
+  apk add --no-cache \
+    python3
+
 # Installation des dépendances
-RUN pip install --no-cache-dir \
+RUN python3 -m pip install --no-cache-dir \
     streamlit==1.37.0 \
     plotly==5.21.0 \
     pandas==2.2.1 \
