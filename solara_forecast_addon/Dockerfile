@@ -18,10 +18,10 @@ RUN pip install -r requirements.txt
 # # Autoriser l'exécution du script
 # RUN chmod a+x /run.sh
 
-RUN chmod a+x home/solar_panel/run.sh
+RUN chmod a+x /home/solar_panel/run.sh
 
 # Démarrage de l'application
-CMD [ "home/solar_panel/run.sh" ]
+CMD [ "/home/solar_panel/run.sh" ]
 # #===========
 # ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-python:3.11
 
