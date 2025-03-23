@@ -14,9 +14,9 @@ export PANEL_POWER=${PANEL_POWER}
 export EFFICIENCY=${EFFICIENCY}
 
 
-echo "running pws server"
+echo "running streamlit server"
 # Lancement de Streamlit
-exec python3 /app.py 
+exec streamlit run /app.py 
     # --server.address 0.0.0.0 \
     # --server.port 8501 \
     # --server.baseUrlPath="{{ingress_entry}}" \

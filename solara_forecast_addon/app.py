@@ -18,7 +18,7 @@ longitude = 2.5716759068377257
 api_key = "ec6051d6d6c6360fbb75fb737bcef45f"
 
 # Input pour la puissance des panneaux
-power = st.number_input('Puissance des panneaux solaires (W)', min_value=1, value=1000)
+panel_power = st.number_input('Puissance des panneaux solaires (W)', min_value=1, value=1000)
 efficiency = 0.2  # Efficacité des panneaux (20%)
     
 def main():
