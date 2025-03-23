@@ -1,0 +1,32 @@
+name: "Solar Production Forecast"
+description: "Prévision de production pour panneaux solaires basée sur les données météo"
+version: "1.0.0"
+slug: "solar_forecast"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+startup: application
+ingress: true
+ingress_port: 8501
+panel_icon: mdi:solar-power
+panel_title: "Prévision Solaire"
+ports:
+  8501/tcp: null
+ports_description:
+  8501/tcp: "Interface Web (Streamlit)"
+options:
+  latitude: 48.831923130095056
+  longitude: 2.5716759068377257
+  api_key: "ec6051d6d6c6360fbb75fb737bcef45f"
+  panel_power: 1000
+  efficiency: 0.2
+schema:
+  latitude: float
+  longitude: float
+  api_key: str
+  panel_power: int
+  efficiency: float(0.01,1)
