@@ -5,10 +5,8 @@ FROM ${BUILD_FROM}
 # Install requirements for add-on
 RUN \
   apk add --no-cache \
-    python3
-
-# Installation des dépendances
-RUN python3 -m pip install --no-cache-dir \
+    python3 \
+  && python3 -m pip install --no-cache-dir \
     streamlit==1.37.0 \
     plotly==5.21.0 \
     pandas==2.2.1 \
