@@ -13,12 +13,14 @@ st.set_page_config(
 )
 
 # Récupération des variables d'environnement (configurations de l'addon)
-latitude = float(os.getenv("LATITUDE", "48.831923130095056"))
-longitude = float(os.getenv("LONGITUDE", "2.5716759068377257"))
-api_key = os.getenv("API_KEY", "")
-panel_power = int(os.getenv("PANEL_POWER", "1000"))
-efficiency = float(os.getenv("EFFICIENCY", "0.2"))
+latitude = 48.831923130095056
+longitude = 2.5716759068377257
+api_key = "ec6051d6d6c6360fbb75fb737bcef45f"
 
+# Input pour la puissance des panneaux
+power = st.number_input('Puissance des panneaux solaires (W)', min_value=1, value=1000)
+efficiency = 0.2  # Efficacité des panneaux (20%)
+    
 def main():
     st.title("☀️ Prévision de Production Solaire")
     
