@@ -15,9 +15,9 @@ export PANEL_POWER=${PANEL_POWER}
 export EFFICIENCY=${EFFICIENCY}
 
 # Lancement de Streamlit
-exec streamlit run /app/app.py \
-    --server.address 0.0.0.0 \
-    --server.port 8501 \
-    --server.baseUrlPath="{{ingress_entry}}" \
-    --server.enableCORS=false \
-    --server.enableWebsocketCompression=false
+exec streamlit run /app/app.py 
+    # --server.address 0.0.0.0 \
+    # --server.port 8501 \
+    # --server.baseUrlPath="{{ingress_entry}}" \
+    # --server.enableCORS=false \
+    # --server.enableWebsocketCompression=false
