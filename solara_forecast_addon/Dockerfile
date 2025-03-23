@@ -3,13 +3,8 @@ FROM $BUILD_FROM
 
 # Install requirements for add-on
 RUN \
-  apk add --no-cache \
-    python3 \
-  && python3 -m pip install --no-cache-dir \
-    streamlit==1.37.0 \
-    plotly==5.21.0 \
-    pandas==2.2.1 \
-    pyowm==3.3.0
+    apk add --no-cache \
+    python3
 
 # Copie des fichiers de l'application
 WORKDIR /app
