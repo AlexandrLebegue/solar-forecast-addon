@@ -15,7 +15,7 @@ ingress_port: 8501
 panel_icon: mdi:solar-power
 panel_title: "Prévision Solaire"
 ports:
-  8501/tcp: null
+  8501/tcp: 8501
 ports_description:
   8501/tcp: "Interface Web (Streamlit)"
 options:
