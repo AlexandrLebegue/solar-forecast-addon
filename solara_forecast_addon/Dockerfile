@@ -1,6 +1,5 @@
 
-FROM python:3.8
-LABEL maintainer="Robin Cole @robmarkcole"
+FROM python:3.11
 
 EXPOSE 8501
 
@@ -14,8 +13,8 @@ COPY . /home/streamlit
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-# Autoriser l'exécution du script
-RUN chmod a+x /run.sh
+# # Autoriser l'exécution du script
+# RUN chmod a+x /run.sh
 
 # Démarrage de l'application
 CMD [ "/run.sh" ]
